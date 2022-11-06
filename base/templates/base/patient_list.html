@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h1>Patients</h1>
+<a href="{% url 'admin-page' %}">&#8592; Back</a>
+<br>
+<a href="{% url 'patient-create' %}">Add a patient</a>
+
+<table>
+    {% for patient in patients %}
+    <tr>
+        <td>{{patient.name_surname_middlename}}</td>
+        <td><a href="{% url 'patient' patient.id %}">View</a></td>
+        <td><a href="{% url 'patient-update' patient.id %}">Edit</a></td>
+        <td><a href="{% url 'patient-delete' patient.id %}">Delete</a></td>
+    </tr>
+    {% empty %}
+    <h3>No patients in list</h3>
+    {% endfor %}
+</table>
+
+{% endblock content %}

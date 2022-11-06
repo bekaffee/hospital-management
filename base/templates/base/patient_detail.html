@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h1>Patient: {{object}}</h1>
+<a href="{% url 'patients' %}">&#8592; Back</a>
+<br>
+<h>Date of birth: {{object.date_of_birth}}</h1>
+<br>
+<h>IIN number: {{object.iin_number}}</h1>
+<br>
+<h>ID number: {{object.id_number}}</h1>
+<br>
+<h>Name, surname, middlename: {{object.name_surname_middlename}}</h1>
+<br>
+<h>Blood group: {{object.blood_group}}</h1>
+<br>
+<h>Emergency contact number: {{object.emergency_contact_number}}</h1>
+<br>
+<h>Contact number: {{object.contact_number}}</h1>
+<br>
+<h>Email: {{object.email}}</h1>
+<br>
+<h>Address: {{object.address}}</h1>
+<br>
+<h>Martial status: {{object.martial_status}}</h1>
+<br>
+<h>Registration date: {{object.registration_date}}</h1>
+<br>
+<h>Other details: {{object.other_details}}</h1>
+<br>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <div>
+        <h1>Hello {{request.user}}</h1>
+    </div>
+
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</div>
+
+
+<h1>Main Page</h1>
+<a href="{% url 'patients' %}">List of Patients</a>
+<br>
+<a href="{% url 'doctors' %}">List of Doctors</a>
+
+{% endblock content %}

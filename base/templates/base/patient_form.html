@@ -1,0 +1,12 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h3>New Patient</h3>
+<a href="{% url 'patients' %}">&#8592; Back</a>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock content %}

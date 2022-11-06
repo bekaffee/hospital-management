@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h1>Doctors</h1>
+<a href="{% url 'admin-page' %}">&#8592; Back</a>
+<br>
+<a href="{% url 'doctor-create' %}">Add a doctor</a>
+
+<table>
+    {% for doctor in doctors %}
+    <tr>
+        <td>{{doctor.name_surname_middlename}}</td>
+        <td><a href="{% url 'doctor' doctor.id %}">View</a></td>
+        <td><a href="{% url 'doctor-update' doctor.id %}">Edit</a></td>
+        <td><a href="{% url 'doctor-delete' doctor.id %}">Delete</a></td>
+    </tr>
+    {% empty %}
+    <h3>No doctors in list</h3>
+    {% endfor %}
+</table>
+
+{% endblock content %}

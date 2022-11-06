@@ -1,0 +1,40 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h1>Doctor: {{object}}</h1>
+<a href="{% url 'doctors' %}">&#8592; Back</a>
+<br>
+<h>Date of birth: {{object.date_of_birth}}</h1>
+<br>
+<h>IIN number: {{object.iin_number}}</h1>
+<br>
+<h>ID number: {{object.id_number}}</h1>
+<br>
+<h>Name, surname, middlename: {{object.name_surname_middlename}}</h1>
+<br>
+<h>Contact number: {{object.contact_number}}</h1>
+<br>
+<h>Department ID: {{object.department_id}}</h1>
+<br>
+<h>Specialization details ID: {{object.specialization_details_id}}</h1>
+<br>
+<h>Experience in years: {{object.experience_in_years}}</h1>
+<br>
+<h>Photo of the doctor: {{object.photo_of_the_doctor}}</h1>
+<br>
+<h>Category: {{object.category}}</h1>
+<br>
+<h>Price of the appointment: {{object.price_of_the_appointment}}</h1>
+<br>
+<h>Schedule details: {{object.schedule_details}}</h1>
+<br>
+<h>Degree/education: {{object.degree_or_education}}</h1>
+<br>
+<h>Rating: {{object.rating}}</h1>
+<br>
+<h>Address: {{object.address}}</h1>
+<br>
+<h>Homepage url: {{object.homepage_url}}</h1>
+<br>
+
+{% endblock content %}
